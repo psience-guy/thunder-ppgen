@@ -1,0 +1,96 @@
+#info ./psgen ncpp 12:47:29 Aug 09 2012 lshamberger
+
+fhi pseudopotential tool fhipp - version rev270603B
+
+               chemical symbol  Ag      
+                nuclear charge  47.00
+                  total charge   0.00
+         number of core states   8
+      number of valence states   3
+    exchange-correlation model   9  GGA X Becke C Lee/Yang/Parr             
+      scalar-relativistic mode
+        parameters radial mesh   545    1.024700  0.132979E-03
+
+       === all-electron atom ===
+
+<        n     l      occupation  eigenvalue(eV)
+
+<  1     1     0        2.0000       -25334.8934          -931.0328
+<  2     2     0        2.0000        -3730.1838          -137.0806
+<  3     2     1        6.0000        -3346.1857          -122.9691
+<  4     3     0        2.0000         -683.5280           -25.1190
+<  5     3     1        6.0000         -557.4374           -20.4853
+<  6     3     2       10.0000         -358.5007           -13.1746
+<  7     4     0        2.0000          -94.9568            -3.4896
+<  8     4     1        6.0000          -58.4499            -2.1480
+<  9     4     2       10.0000           -7.3354            -0.2696
+< 10     5     0        1.0000           -4.4537            -0.1637
+< 11     5     1        0.0000           -0.7737            -0.0284
+
+                                  (Hartree a.u.)
+                  total energy       -5316.61548
+                kinetic energy        5523.64183
+                orbital energy       -3201.66310
+                coulomb energy      -12850.57048
+                hartree energy        2159.96767
+   exchange-correlation energy        -149.65451
+           xc potential energy        -194.66980
+          number of iterations                27   convergence  0.0E+00
+           core kinetic energy        5445.35286
+           core orbital energy       -3198.80375
+         core potential energy       -8644.15661
+            integrated density          47.00000
+  ... 1st derivative test 1 =            1.00000
+  ... 2nd derivative test 1 =            1.00000
+
+ fhipp - all-electron atom done
+
+    === TROULLIER-MARTINS mode ===  t     
+
+  l  n     radius:     node      peak       default core
+x 0  5                1.108      2.479      2.420
+x 1  5                1.252      3.753      2.620
+x 2  4                0.428      1.030      2.420
+
+    === pseudo atom ===
+
+  l  type  rcore       rmatch          eigenvalue(eV)      norm test   slope test
+                                 all-electron     pseudo     1 =         1 =
+  0  t     2.4191908   2.4789448  -4.4536604  -4.4536800   0.9999994   0.9998431
+  1  t     2.6029170   2.6672091  -0.7736858  -0.7736796   1.0000040   1.0000111
+  2  t     2.4191908   2.4789448  -7.3353889  -7.3354143   0.9999996   1.0000035
+
+  --- linearized core-valence XC ---
+        c-v equidensity radius           1.10809
+
+                                  (Hartree a.u.)
+                  total energy         -35.98996
+                kinetic energy          29.58844
+              potential energy         -94.72870
+                hartree energy          34.78103
+                     xc energy          -5.63073
+                      c energy          -0.33743
+    integrated valence density          11.00000
+   ... 1st derivative test 1 =           1.00000
+   ... 2nd derivative test 1 =           1.00000
+    coulomb tail beyond radius           2.419     (tolerance  1.0E-03)
+                  y range plot       -21   1   5
+
+ fhipp - done for input @
+
+@ 47.00  8  3  9 0.00E+00 : z nc nv iexc rnlc
+@     1  0   2.00         : n l f
+@     2  0   2.00
+@     2  1   6.00
+@     3  0   2.00
+@     3  1   6.00
+@     3  2  10.00
+@     4  0   2.00
+@     4  1   6.00
+@     4  2  10.00
+@     5  0   1.00
+@     5  1   0.00
+@ 2  t                   : ltmx spptype
+@ 0   2.42  0.00E+00  t  : lt rct et spptype
+@ 1   2.62  0.00E+00  t
+@ 2   2.42  0.00E+00  t

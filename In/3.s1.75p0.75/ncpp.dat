@@ -1,0 +1,99 @@
+#info ./psgen ncpp 13:04:43 Aug 11 2012 lewis
+
+fhi pseudopotential tool fhipp - version rev270603B
+
+               chemical symbol  In      
+                nuclear charge  49.00
+                  total charge   0.50
+         number of core states   9
+      number of valence states   2
+    exchange-correlation model   3  LDA CA Perdew/Zunger 1980               
+      scalar-relativistic mode
+        parameters radial mesh   547    1.024700  0.127551E-03
+
+       === all-electron atom ===
+
+<        n     l      occupation  eigenvalue(eV)
+
+<  1     1     0        2.0000       -27725.4025         -1018.8817
+<  2     2     0        2.0000        -4155.5752          -152.7134
+<  3     2     1        6.0000        -3732.5971          -137.1693
+<  4     3     0        2.0000         -791.2377           -29.0772
+<  5     3     1        6.0000         -652.7122           -23.9865
+<  6     3     2       10.0000         -436.9815           -16.0586
+<  7     4     0        2.0000         -123.4332            -4.5361
+<  8     4     1        6.0000          -82.0178            -3.0141
+<  9     4     2       10.0000          -22.6589            -0.8327
+< 10     5     0        1.7500          -11.9884            -0.4406
+< 11     5     1        0.7500           -5.7459            -0.2112
+
+                                  (Hartree a.u.)
+                  total energy       -5876.32501
+                kinetic energy        6123.33347
+                orbital energy       -3565.27923
+                coulomb energy      -14206.81534
+                hartree energy        2361.32174
+   exchange-correlation energy        -154.16488
+           xc potential energy        -204.44084
+          number of iterations                25   convergence  0.0E+00
+           core kinetic energy        6118.11221
+           core orbital energy       -3564.34988
+         core potential energy       -9682.46209
+            integrated density          48.50000
+  ... 1st derivative test 1 =            1.00000
+  ... 2nd derivative test 1 =            1.00000
+
+ fhipp - all-electron atom done
+
+    === HAMANN mode ===   h     
+
+  l  n     radius:     node      peak       default core
+x 0  5                1.012      2.105      1.263
+x 1  5                1.116      2.686      1.612
+x 2  5                0.000      0.000      1.744
+
+    === pseudo atom ===
+
+  l  type  rcore       rmatch          eigenvalue(eV)      norm test   slope test
+                                 all-electron     pseudo     1 =         1 =
+  0  h     1.3238749   3.1866140 -11.9884267 -11.9884278   1.0000001   1.0000036
+  1  h     1.4956523   4.2706138  -5.7458787  -5.7458788   1.0000000   1.0000030
+  2  h     2.0539422   5.0660264   5.0000000   5.0000002   0.9999999   0.9999999
+
+   --- nonlinear core-valence XC ---
+    core density cutoff radius           1.39008
+        c-v equidensity radius           2.26451
+ integrated model core density          16.17864
+              true core charge          46.00000
+
+                                  (Hartree a.u.)
+                  total energy         -14.67628
+                kinetic energy           0.58384
+              potential energy          -2.67904
+                hartree energy           1.02196
+                     xc energy         -13.60303
+                      c energy          -1.22389
+    integrated valence density           2.50000
+   ... 1st derivative test 1 =           1.00000
+   ... 2nd derivative test 1 =           1.00000
+    coulomb tail beyond radius           3.265     (tolerance  1.0E-03)
+                  y range plot        -2   6   2
+
+ fhipp - done for input @
+
+@ 49.00  9  2  3 0.14E+01 : z nc nv iexc rnlc
+@     1  0   2.00         : n l f
+@     2  0   2.00
+@     2  1   6.00
+@     3  0   2.00
+@     3  1   6.00
+@     3  2  10.00
+@     4  0   2.00
+@     4  1   6.00
+@     4  2  10.00
+@     5  0   1.75
+@     5  1   0.75
+@ 2  h                   : ltmx spptype
+@ 0   1.35  0.00E+00  h  : lt rct et spptype
+@ 1   1.50  0.00E+00  h
+@ 2   2.10  0.50E+01  h

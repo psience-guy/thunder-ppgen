@@ -1,0 +1,25 @@
+Instalation:
+1. cd src; make clean; make
+2  cd tools; make clean; make
+
+run:
+cd work
+
+
+./builder.com l_loc
+
+where l_loc is local part of PP (0..s;1..p etc. )
+leaving l_loc blank the code uses d-component as local part
+Optinonally, you can preform each step of generation separately taking 
+more controll over the generation process:
+
+a) ./psgen *.ini
+b) ./pswatch *.ini  -l $l_loc
+c) ../tools/linear.x
+d) ../tools/qlqgrid.x
+e) ../tools/mk_pseudoFile.x
+
+for more details about the usage of the code see documentation of 
+fhi98PP package (http://www.fhi-berlin.mpg.de/th/fhi98md/fhi98PP/)
+
+ 

@@ -1,0 +1,313 @@
+l_loc = 
+ Call psgen
+./psgen - done: output
+createPP.log
+ncpp.aep
+ncpp.cpi
+ncpp.dat
+ncpp.fc
+ncpp.ini
+pseudo0.dat
+pseudo1.dat
+pseudo2.dat
+xv.ncpp.ae_wfct.agr
+xv.ncpp.density.agr
+xv.ncpp.ps_ae_wfct.agr
+xv.ncpp.pspot_i.agr
+xv.ncpp.pspot_s.agr
+xv.ncpp.unscreen.agr
+ Call pswatch
+#info ./pswatch ncpp 19:02:17 Jul 09 2012 lewis
+
+fhi pseudopotential tool pslp - version rev270603B
+
+               chemical symbol  In      
+                nuclear charge  49.00
+   number of valence electrons   3.00
+      number of valence states   2
+    exchange-correlation model   3  LDA CA Perdew/Zunger 1980               
+     nonlinear core-valence XC
+        parameters radial mesh   547    1.024700  0.127551E-03
+  input pseudopotentials up to   d
+
+          === pseudo atom (Hartree a.u.) ===
+
+<        n     l   occupation  eigenvalue(eV)  potential energy
+<  1     1     0      2.0000       -8.4870        -1.11388
+<  2     2     1      1.0000       -2.7033        -0.88941
+
+                  total energy     -14.79790
+                kinetic energy       0.63582
+  ionic pseudopotential energy      -3.11717
+                hartree energy       1.38706
+                     xc energy     -13.70362
+        local potential energy      -2.69341
+           xc potential energy      -1.01589
+                xc energy core     -12.92508
+             xc energy valence      -0.77854
+    integrated valence density       3.00000
+       integrated core density      16.17940
+       ... 1st derivative test       1.00000
+       ... 2nd derivative test       1.00026
+estimated equidensity radius >       2.20993
+          number of iterations            18   convergence  0.0E+00
+                  y range plot        -2   6   2
+
+ pslp - pseudoatom done - now testing
+
+ --- assuming scalar-relativistic all-electron atom ---
+
+ --- d component taken as local potential ---
+ --- input wavefunctions used for kb potentials ---
+
+ --- kb potentials: spectrum of bound states (eV) ---
+
+            l          e0            e1            e2
+  Write vkb L=           0  to vkb0.dat                                . [a.u.]
+ call klbyii
+ end call klbyii
+semilocal   0       -8.4870       -0.2438        0.0000
+ call klbyii
+ end call klbyii
+nonlocal    0       -8.4870       -0.2333        0.0000
+  Write vkb L=           1  to vkb1.dat                                . [a.u.]
+ call klbyii
+ end call klbyii
+semilocal   1       -2.7030        0.0000        0.0000
+ call klbyii
+ end call klbyii
+nonlocal    1       -2.7030        0.0000        0.0000
+  Write vkb L=           2  to vkb2.dat                                . [a.u.]
+
+ --- analysis of kb potentials: s waves  ---
+
+ * no ghost (ekb < 0, eref < eloc0)
+
+                     kb cosine       -0.4884
+                     kb energy      -20.3844 eV      ekb
+   local potential groundstate       -4.8815 eV    eloc0
+        dto. 1st excited state       -0.1687 eV    eloc1
+              reference energy       -8.4870 eV     eref
+
+ --- analysis of kb potentials: p waves  ---
+
+ & dftseq - no bound state found (iter): e=>0 n l           3           1
+ note: for the local potential no bound excited p state
+       is found, the ghost state analysis will assume
+       a zero 1st excited state energy (variable eloc1)
+
+ * no ghost (ekb < 0, eref < eloc0)
+
+                     kb cosine       -0.5302
+                     kb energy       -6.4300 eV      ekb
+   local potential groundstate       -1.3875 eV    eloc0
+        dto. 1st excited state        0.0000 eV    eloc1
+              reference energy       -2.7033 eV     eref
+
+ --- logarithmic derivatives: at radius = 3.6001 ---
+
+ --- nonlocal potentials ---
+ --- all-electron potential ---
+ --- semilocal potentials ---
+
+ --- kinetic energy convergence in momentum space ---
+
+     l  n  bracket   cutoff    norm   kinet. energy
+            (eV)      (Ry)               (Hartree)
+ck   0     1.0E+00      4   0.987529   0.171858E+00
+ck   0     1.0E-01      9   0.999437   0.203798E+00
+ck   0     1.0E-02     22   0.999972   0.206692E+00
+ck   0     1.0E-03     28   0.999998   0.206991E+00
+cx   0  1                   1.000000   0.207024E+00
+
+ck   1     1.0E+00      1   0.952375   0.189536E+00
+ck   1     1.0E-01      6   0.999040   0.218217E+00
+ck   1     1.0E-02     11   0.999943   0.221431E+00
+ck   1     1.0E-03     16   0.999997   0.221740E+00
+cx   1  2                   1.000000   0.221776E+00
+
+ --- coulomb tail of pseudopotentials ---
+     Tolerance 1.0E-03 is met for
+     l= 1 at radii >   3.346
+     l= 2 at radii >   3.346
+     l= 3 at radii >   3.969
+
+ --- done & exiting ---
+./pswatch - done: output
+createPP.log
+xv.ncpp.lder_sd.agr
+qlclATOMIC.dat
+vkb0.dat
+vkb1.dat
+vkb2.dat
+lmaxNlloc.dat
+ Call linear
+  This code is to transform the output of psgen into
+  a linear grid format.
+  Ready to open ncpp.ini
+ 49.00   9   2   3   1.40
+   0   0   2.00
+   0   0   2.00
+   0   1   6.00
+   0   0   2.00
+   0   1   6.00
+   0   2  10.00
+   0   0   2.00
+   0   1   6.00
+   0   2  10.00
+   0   0   2.00
+   0   1   1.00
+ Lmax =           2
+ PP =  
+  get lmax and L_loc from lmaxNlloc.dat
+  lmax=           2  L_loc=           2
+           0  pseudo0.dat                   vpplinear0.dat                
+ psilinear0.dat                
+           1  pseudo1.dat                   vpplinear1.dat                
+ psilinear1.dat                
+           2  pseudo2.dat                   vpplinear2.dat                
+ psilinear2.dat                
+ 	First: local part vpplinear_loc.dat   
+   read from foutl(l_loc)=pseudo2.dat                   
+  Ready to open 21
+   
+  read in nr points=         548
+  rmax=   41.2195139089433       in Ang units.
+  Ready to open 22
+  Ready to open 23
+  
+ 	Second: non-local part 
+   
+  
+  L value=           0
+ 		vpplinear0.dat                
+  Ready to open New 21
+   
+  read in nr points=         548
+  rmax=   41.2195139089433       in Ang units.
+  Ready to open 12
+  
+  L value=           1
+ 		vpplinear1.dat                
+  Ready to open New 21
+   
+  read in nr points=         548
+  rmax=   41.2195139089433       in Ang units.
+  Ready to open 12
+  
+  L value=           2
+  This is local. We set vnl=0
+ 		vpplinear2.dat                
+  Ready to open New 21
+   
+  read in nr points=         548
+  rmax=   41.2195139089433       in Ang units.
+  Ready to open 12
+   
+  Done with linear. Bye now.
+   
+   
+                       WELCOME
+  PROGRAM QLG grid: Bessel transform of NON-LOCAL separable QL potential
+   
+  
+  cl(L)=  -5.59691340000000       1/Hartree
+  cl(L)=  -15.0554176000000       1/Hartree
+  cl(L)=  0.000000000000000E+000  1/Hartree
+   LOK=           2
+  We read in to L=           2
+  Now convert to 1/eV and write to qlcl.dat
+  cl(L)= -0.205681198789687     
+  cl(L)= -0.553272155371809     
+  cl(L)=  0.000000000000000E+000
+  
+   
+  Begin Next L value.......................
+  L=           0
+   
+  Use one of the QL data files output from gncpp
+  the files are ppkb0.dat or ppkb1.dat or ....
+  UPDATE: This program was updated June 25, 1992
+  We now read in eV-A units of everything from
+  gncpp.f --- No conversions need to be made here!
+  vkb0.dat                      
+   
+  we read in ql(r) in atomic units.
+  We now convert to eV,A.
+  rLOG(i),qlrLOG=  1.275510204081600E-004  5.115849389057686E-005
+  rLOG(i),qlrLOG=  1.307015306122400E-004  5.242211018890884E-005
+   
+  read in nr points=         548
+  rmax=   41.2195139089433       in Ang units.
+ L =           0   JJ: NO FF Transform now
+   
+  Begin Next L value.......................
+  L=           1
+   
+  Use one of the QL data files output from gncpp
+  the files are ppkb0.dat or ppkb1.dat or ....
+  UPDATE: This program was updated June 25, 1992
+  We now read in eV-A units of everything from
+  gncpp.f --- No conversions need to be made here!
+  vkb1.dat                      
+   
+  we read in ql(r) in atomic units.
+  We now convert to eV,A.
+  rLOG(i),qlrLOG=  1.275510204081600E-004  2.124210443196811E-009
+  rLOG(i),qlrLOG=  1.307015306122400E-004  2.230442437432301E-009
+   
+  read in nr points=         548
+  rmax=   41.2195139089433       in Ang units.
+ L =           1   JJ: NO FF Transform now
+   
+  Begin Next L value.......................
+  L=           2
+   
+  Use one of the QL data files output from gncpp
+  the files are ppkb0.dat or ppkb1.dat or ....
+  UPDATE: This program was updated June 25, 1992
+  We now read in eV-A units of everything from
+  gncpp.f --- No conversions need to be made here!
+  vkb2.dat                      
+   
+  we read in ql(r) in atomic units.
+  We now convert to eV,A.
+  rLOG(i),qlrLOG=  1.275510204081600E-004  0.000000000000000E+000
+  rLOG(i),qlrLOG=  1.307015306122400E-004  0.000000000000000E+000
+   
+  read in nr points=         548
+  rmax=   41.2195139089433       in Ang units.
+ L =           2   JJ: NO FF Transform now
+   
+  Welcome to mk_pseudoFile.x
+  This writes out the final XXX.pp file.
+  E.g. 014.pp etc.
+   
+  Read lmax,L_loc, and L-values from lmaxNlloc.dat
+           5           0   2.000000    
+           5           1   1.000000    
+  The OUTPUT file:
+  It will have a name like 014.pp (Si), 003.pp (Li)
+  The output file is:049.pp                        
+ nshells =            2
+  reading V_local (r):
+  ic=       10000
+  isafe=         595
+  A very close approximation to Z is   3.000088    
+  rsafe=   2.448684    
+  alpha=   1.633531    
+  Reading and saving V_NL(l) (SR)
+ L=0 Npoint=  660
+ L=1 Npoint=  660
+  Reading V^(KB) information
+  Reading and saving V^KB(l) (SR)
+ L=0 Npoint=  630 cl=    -0.2056812
+ L=1 Npoint=  640 cl=    -0.5532722
+   
+  *******************************************
+   
+  Done with mk_pseudoFile.x
+  The OUTPUT file:
+  The output file is:049.pp                        
+   
+  *******************************************

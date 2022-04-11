@@ -1,0 +1,84 @@
+#info ./psgen ncpp 11:09:30 Oct 07 2011 lewis
+
+fhi pseudopotential tool fhipp - version rev270603B
+
+               chemical symbol  P       
+                nuclear charge  15.00
+                  total charge   2.00
+         number of core states   3
+      number of valence states   2
+    exchange-correlation model   9  GGA X Becke C Lee/Yang/Parr             
+      scalar-relativistic mode
+        parameters radial mesh   499    1.024700  0.416667E-03
+
+       === all-electron atom ===
+
+<        n     l      occupation  eigenvalue(eV)
+
+<  1     1     0        2.0000        -2110.7914           -77.5695
+<  2     2     0        2.0000         -198.3624            -7.2896
+<  3     2     1        6.0000         -149.1233            -5.4801
+<  4     3     0        1.2500          -34.3299            -1.2616
+<  5     3     1        1.7500          -24.5958            -0.9039
+
+                                  (Hartree a.u.)
+                  total energy        -340.75804
+                kinetic energy         341.87974
+                orbital energy        -205.75792
+                coulomb energy        -801.55313
+                hartree energy         141.45561
+   exchange-correlation energy         -22.54026
+           xc potential energy         -28.99575
+          number of iterations                17   convergence  0.0E+00
+           core kinetic energy         334.88656
+           core orbital energy        -202.59915
+         core potential energy        -537.48571
+            integrated density          13.00000
+  ... 1st derivative test 1 =            1.00000
+  ... 2nd derivative test 1 =            1.00000
+
+ fhipp - all-electron atom done
+
+    === HAMANN mode ===   h     
+
+  l  n     radius:     node      peak       default core
+x 0  3                0.645      1.478      0.887
+x 1  3                0.629      1.630      0.978
+x 2  3                0.000      0.000      0.978
+
+    === pseudo atom ===
+
+  l  type  rcore       rmatch          eigenvalue(eV)      norm test   slope test
+                                 all-electron     pseudo     1 =         1 =
+  0  h     0.9297312   2.2378960 -34.3298795 -34.3298804   1.0000000   1.0000087
+  1  h     0.9762271   2.5907191 -24.5958207 -24.5958206   1.0000000   1.0000087
+  2  h     0.9762271   2.3498134 -24.5958207 -24.5958219   1.0000000   1.0000000
+
+  --- linearized core-valence XC ---
+        c-v equidensity radius           1.10290
+
+                                  (Hartree a.u.)
+                  total energy          -5.07142
+                kinetic energy           1.80131
+              potential energy          -8.16024
+                hartree energy           2.16187
+                     xc energy          -0.87435
+                      c energy          -0.05695
+    integrated valence density           3.00000
+   ... 1st derivative test 1 =           1.00000
+   ... 2nd derivative test 1 =           1.00000
+    coulomb tail beyond radius           1.630     (tolerance  1.0E-03)
+                  y range plot        -9   2   2
+
+ fhipp - done for input @
+
+@ 15.00  3  2  9 0.00E+00 : z nc nv iexc rnlc
+@     1  0   2.00         : n l f
+@     2  0   2.00
+@     2  1   6.00
+@     3  0   1.25
+@     3  1   1.75
+@ 2  h                   : ltmx spptype
+@ 0   0.95  0.00E+00  h  : lt rct et spptype
+@ 2   0.98  -.25E+02  h
+@ 3   0.98  -.25E+02  h
