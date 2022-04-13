@@ -142,7 +142,8 @@ c GGA correction to LSDA
             dp=rhp(1)+rhp(2)
             dpp=rhpp(1)+rhpp(2)
             ztp=(rhp(1)-rhp(2)-zet*dp)/d
-            sk=2.d0*dsqrt(fk/pi)
+c           sk=2.d0*dsqrt(fk/pi)
+            sk=2.d0*sqrt(fk/pi)
             g=((1.d0+zet)**thrd2 + (1.d0-zet)**thrd2) /2.d0
             gks2=2.d0*sk*g
             gks2sq=gks2*gks2

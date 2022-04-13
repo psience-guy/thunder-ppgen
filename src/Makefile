@@ -11,8 +11,9 @@
 
 #FC      = pgf90
 #FC      = g77
-FC      = gfortran -ffixed-form  -fdefault-real-8 
-#FC      = ifort  
+#FC      = gfortran -ffixed-form -fdefault-real-8 -lgfortran
+FC      = gfortran -ffixed-form -lgfortran
+#FC      = ifort -lgfortran
 FFLAGS  = 
 
 LD      = $(FC)
